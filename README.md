@@ -1,1 +1,1 @@
-# file-archiver
+# File Archiver CLI [![Build Status](https://travis-ci.com/arpad1337/file-archiver.svg?branch=master)](https://travis-ci.com/arpad1337/file-archiver)
