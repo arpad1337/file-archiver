@@ -12,6 +12,12 @@ export class FileArchiver {
     private fileStorage: FileStorage
     private zipCompressor: ZipCompressor
 
+    /**
+     * Returns a FileArchiver
+     * @constructor
+     * @param {FileStorage} fileStorage - file storage instance
+     * @param {ZipCompressor} zipCompressor - zip compressor instance
+     */
     constructor(fileStorage: FileStorage, zipCompressor: ZipCompressor) {
         this.fileStorage = fileStorage
         this.zipCompressor = zipCompressor

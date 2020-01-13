@@ -31,6 +31,11 @@ export class FileStorage {
 
     private fileStorageDriver: FileStoragePackage
 
+    /**
+     * Returns a FileStorage
+     * @constructor
+     * @param {FileStoragePackage} fileStorageDriver - file storage driver instance
+     */
     constructor(fileStorageDriver: FileStoragePackage) {
         this.fileStorageDriver = fileStorageDriver
     }

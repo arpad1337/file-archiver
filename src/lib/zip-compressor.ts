@@ -13,6 +13,12 @@ export class ZipCompressor {
     private compressionDriver: ArchiverPackage
     private fileStorage: FileStorage
 
+    /**
+     * Returns a ZipCompressor
+     * @constructor
+     * @param {ArchiverPackage} compressionDriver - compression driver instance
+     * @param {FileStorage} fileStorage - file storage instance
+     */
     constructor(compressionDriver: ArchiverPackage, fileStorage: FileStorage) {
         this.compressionDriver = compressionDriver
         this.fileStorage = fileStorage
