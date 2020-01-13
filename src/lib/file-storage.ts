@@ -88,7 +88,7 @@ export class FileStorage {
     /**
      * Copying files to dest
      * @param {string[]} files - source path of files
-     * @returns {string}
+     * @returns {string} destination path
      */
     public copyFilesToDestination(files: string[]): string {
         const destination = path.resolve(`/tmp/${uuid()}`)

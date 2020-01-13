@@ -4,7 +4,7 @@ const { ZipCompressor } = require('../../dist/lib/zip-compressor')
 
 const { createSpyFromClass } = require('jasmine-auto-spies')
 
-const files = require('../helpers/mock-data')
+const files = require('./mock-data')
 
 describe('FileArchiver test', () => {
 

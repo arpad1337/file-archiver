@@ -1,4 +1,4 @@
-const Reporter = require('jasmine-console-reporter');
+const Reporter = require('jasmine-console-reporter')
 const reporter = new Reporter({
     colors: 1,
     cleanStack: 1,
@@ -9,6 +9,6 @@ const reporter = new Reporter({
     activity: false,
     emoji: true,
     beep: true
-});
+})
 
-jasmine.getEnv().addReporter(reporter);
+jasmine.getEnv().addReporter(reporter)

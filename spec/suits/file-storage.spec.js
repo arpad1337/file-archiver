@@ -1,7 +1,7 @@
 const { FileStorage } = require('../../dist/lib/file-storage')
 const { ObjectWritableMock } = require('stream-mock')
 
-const files = require('../helpers/mock-data')
+const files = require('./mock-data')
 
 class FSStub {
 
@@ -43,6 +43,7 @@ class FSStub {
     rmdirSync(path) {
 
     }
+
 }
 
 describe('FileStorage tests', () => {

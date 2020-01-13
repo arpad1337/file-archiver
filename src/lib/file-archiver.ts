@@ -25,7 +25,7 @@ export class FileArchiver extends EventEmitter {
      * @param {string} sourceFolder - source folder
      * @param {string} destinationFolder - destination folder
      * @param {string} format - default: 'zip'
-     * @returns {Promise<string>} destination file
+     * @returns {Promise<string>} destination file as promise
      */
     public async archiveFiles(olderThanMonths: number, sourceFolder: string, destinationFolder: string, format: FileFormat = 'zip'): Promise<string> {
         const date = moment().subtract(olderThanMonths, 'months').startOf('month').toDate()

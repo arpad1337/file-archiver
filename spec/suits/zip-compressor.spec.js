@@ -15,7 +15,7 @@ const objectWritableMockFactory = () => {
 const compressonDriverStub = {
     subscribers: [],
     sourcePath: '',
-    directory: function(sourcePath) {
+    directory(sourcePath) {
         this.sourcePath = sourcePath
         return this
     },
