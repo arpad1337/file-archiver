@@ -2,7 +2,7 @@ import { FileArchiver, FileFormat } from './lib/file-archiver'
 
 export class Program {
 
-    public static main(): void {
+    public static async main(): Promise<void> {
         const formats: ReadonlyArray<FileFormat> = ['zip']
         const argv = process.argv.slice(2)
 
@@ -29,11 +29,15 @@ export class Program {
             this.exit(1)
         }
 
-        const archiver = FileArchiver.instance;
-        archiver.archiveFiles(months, sourceFolder, destinationFolder, format).then((outputFile: string) => {
+        try {
+            const archiver = FileArchiver.instance;
+            const outputFile = await archiver.archiveFiles(months, sourceFolder, destinationFolder, format)
             console.log('Output:', outputFile)
             this.exit(0)
-        })
+        } catch(e) {
+            console.error(e)
+            this.exit(1)
+        }
     }
 
     private static exit(code: number): void {
