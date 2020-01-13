@@ -1,12 +1,11 @@
 import { FileStorage, FileWithStats } from "./file-storage"
-import { EventEmitter } from 'events'
 import * as path from 'path'
 import { ZipCompressor } from './zip-compressor'
 import * as moment from 'moment'
 
 export type FileFormat = 'zip' | 'tar.gz'
 
-export class FileArchiver extends EventEmitter {
+export class FileArchiver {
 
     protected static singleton: FileArchiver
 
@@ -14,7 +13,6 @@ export class FileArchiver extends EventEmitter {
     private zipCompressor: ZipCompressor
 
     constructor(fileStorage: FileStorage, zipCompressor: ZipCompressor) {
-        super()
         this.fileStorage = fileStorage
         this.zipCompressor = zipCompressor
     }
