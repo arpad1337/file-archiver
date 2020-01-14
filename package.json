@@ -7,7 +7,8 @@
     "postinstall": "npm run build",
     "build": "tsc --module commonjs --target ES5 --outDir ./dist ./src/*.ts",
     "start": "node index.js",
-    "test": "jasmine"
+    "test": "jasmine",
+    "docs": "typedoc --out docs src"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "jasmine-auto-spies": "^5.1.0",
     "jasmine-console-reporter": "^3.1.0",
     "rxjs": "^6.5.4",
-    "stream-mock": "^2.0.5"
+    "stream-mock": "^2.0.5",
+    "typedoc": "^0.16.2"
   },
   "dependencies": {
     "@types/archiver": "^3.0.0",
